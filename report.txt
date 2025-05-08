@@ -1,0 +1,22 @@
+Matrix Size | Execution Time (ms)
+    10 |      0
+    50 |      1
+   100 |     11
+   500 |   1192
+  1000 |  10869
+  1500 |  38534
+  2000 | 102715
+  2500 | 215845
+Matrix Size: 10x10 - The values matched
+Matrix Size: 50x50 - The values matched
+Matrix Size: 100x100 - The values matched
+Matrix Size: 500x500 - The values matched
+Matrix Size: 1000x1000 - The values matched
+Matrix Size: 10x10 - The values matched
+Matrix Size: 50x50 - The values matched
+Matrix Size: 100x100 - The values matched
+Matrix Size: 500x500 - The values matched
+Matrix Size: 1000x1000 - The values matched
+Matrix Size: 1500x1500 - The values matched
+Matrix Size: 2000x2000 - The values matched
+Matrix Size: 2500x2500 - The values matched
