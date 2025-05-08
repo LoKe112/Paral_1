@@ -1,0 +1,6 @@
+Performance Comparison (Average Time in ms)
+Matrix Size | 1 thread | 2 threads | 4 threads | 8 threads | Speedup (8 vs 1)
+--------------------------------------------------------------------------------
+       100 |         4 |           2 |           1 |           1 |         4.00
+       500 |       456 |         242 |         143 |         118 |         3.86
+      1000 |      3626 |        1968 |        1187 |         968 |         3.75
