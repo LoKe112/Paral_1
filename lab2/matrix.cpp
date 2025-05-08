@@ -59,7 +59,7 @@ vector<int> transpose_matrix(const vector<int>& matrix, int rows, int cols) {
     return transposed;
 }
 
-// Функция только для умножения без сохранения
+
 vector<int> multiply_only(const vector<int>& A, const vector<int>& B,
     int rowsA, int colsA, int rowsB, int colsB) {
     if (colsA != rowsB) {
@@ -107,7 +107,7 @@ void run_tests_for_threads(int num_threads, const vector<int>& sizes, int trials
 
         cout << "  Processing size: " << size << "x" << size << "... ";
 
-        // Генерируем матрицы один раз для всех испытаний (для точности)
+        
         vector<vector<int>> matricesA, matricesB;
         for (int trial = 1; trial <= trials; ++trial) {
             matricesA.push_back(generate_matrix(size, size, trial));
@@ -118,7 +118,7 @@ void run_tests_for_threads(int num_threads, const vector<int>& sizes, int trials
             try {
                 omp_set_num_threads(num_threads);
 
-                // Только умножение матриц с замером времени
+                
                 auto start = high_resolution_clock::now();
                 auto C = multiply_only(matricesA[trial - 1], matricesB[trial - 1], size, size, size, size);
                 auto finish = high_resolution_clock::now();
@@ -126,7 +126,7 @@ void run_tests_for_threads(int num_threads, const vector<int>& sizes, int trials
                 auto duration = duration_cast<milliseconds>(finish - start).count();
                 execution_times.push_back(duration);
 
-                // Сохраняем результаты (после замера времени)
+                
                 string size_dir = results_dir + "/size_" + to_string(size);
                 fs::create_directories(size_dir);
 
